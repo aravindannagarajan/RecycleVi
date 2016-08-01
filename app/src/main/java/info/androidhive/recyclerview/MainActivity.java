@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private List<Movie> movieList = new ArrayList<>();
     private RecyclerView recyclerView;
     private MoviesAdapter mAdapterN;
+//    private MoviesAdapter mAdapterN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
