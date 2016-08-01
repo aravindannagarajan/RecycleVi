@@ -19,7 +19,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     private List<Movie> movieList = new ArrayList<>();
     private RecyclerView recyclerView;
-    private MoviesAdapter mAdapter;
+    private MoviesAdapter mAdapterN;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -30,14 +30,14 @@ public class MainActivity extends AppCompatActivity {
 //        setSupportActionBar(tb);
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
 
-        mAdapter = new MoviesAdapter(movieList);
+        mAdapterN = new MoviesAdapter(movieList);
 
         recyclerView.setHasFixedSize(true);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
 //        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 //        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(mAdapter);
+        recyclerView.setAdapter(mAdapterN);
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation_view);
              final DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -121,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         movie = new Movie("Guardians of the Galaxy", "Science Fiction & Fantasy", "2014");
         movieList.add(movie);
 
-        mAdapter.notifyDataSetChanged();
+        mAdapterN.notifyDataSetChanged();
     }
 
     public interface ClickListener {
